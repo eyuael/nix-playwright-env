@@ -39,11 +39,8 @@ COPY package*.json ./
 COPY tsconfig.json ./
 COPY playwright.config.js ./
 
-# Install dependencies
-RUN npm ci --only=production
-
-# Install Playwright test package specifically (needed for the playwright command)
-RUN npm install @playwright/test
+# Install dependencies (including dev dependencies for Playwright)
+RUN npm ci
 
 # Install Playwright browsers
 RUN npx playwright install --with-deps
