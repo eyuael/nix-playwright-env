@@ -25,7 +25,7 @@ browserServer/
 ├── Dockerfile                # Multi-stage Docker configuration
 ├── package.json              # Node.js dependencies
 ├── tsconfig.json             # TypeScript configuration
-├── playwright.config.ts      # Playwright test configuration
+├── playwright.config.js      # Playwright test configuration
 └── README.md                 # This file
 ```
 
@@ -102,7 +102,7 @@ npm run install-browsers  # Install Playwright browsers
 
 ### Playwright Configuration
 
-The `playwright.config.ts` file includes:
+The `playwright.config.js` file includes:
 - Multiple browser configurations (Chromium, Firefox, WebKit)
 - Mobile device simulation
 - Screenshot and video recording on failures

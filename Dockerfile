@@ -37,7 +37,7 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 COPY tsconfig.json ./
-COPY playwright.config.ts ./
+COPY playwright.config.js ./
 
 # Install dependencies
 RUN npm ci --only=production
