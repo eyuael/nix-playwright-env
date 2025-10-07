@@ -40,7 +40,7 @@ COPY tsconfig.json ./
 COPY playwright.config.js ./
 
 # Install dependencies
-RUN npm ci --only=production
+RUN npm ci
 
 # Install Playwright browsers
 RUN npx playwright install --with-deps
