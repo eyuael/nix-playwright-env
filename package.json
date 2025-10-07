@@ -1,0 +1,36 @@
+{
+  "name": "playwright-typescript-tests",
+  "version": "1.0.0",
+  "description": "Playwright browser automation tests with TypeScript",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "dev": "ts-node src/index.ts",
+    "install-browsers": "playwright install",
+    "clean": "rm -rf dist screenshots test-results"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "browser-automation",
+    "testing",
+    "e2e"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.40.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^24.7.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
