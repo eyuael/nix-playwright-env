@@ -9,25 +9,25 @@ const config = {
   use: {
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
-    launchOptions: {
-      args: [
-        '--no-sandbox',
-        '--disable-setuid-sandbox',
-        '--disable-dev-shm-usage',
-        '--disable-accelerated-2d-canvas',
-        '--no-first-run',
-        '--no-zygote',
-        '--disable-gpu'
-      ]
-    }
+    video: 'retain-on-failure'
   },
   projects: [
     {
       name: 'chromium',
       use: { 
         browserName: 'chromium',
-        viewport: { width: 1280, height: 720 }
+        viewport: { width: 1280, height: 720 },
+        launchOptions: {
+          args: [
+            '--no-sandbox',
+            '--disable-setuid-sandbox',
+            '--disable-dev-shm-usage',
+            '--disable-accelerated-2d-canvas',
+            '--no-first-run',
+            '--no-zygote',
+            '--disable-gpu'
+          ]
+        }
       },
     },
     {
